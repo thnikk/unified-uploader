@@ -4,7 +4,7 @@ This is a basic shell utility to help upload the latest (beta) firmware to your 
 
 ## How to use (Windows)
 
-1. Download this repository by clicking the code button in the top right and then select "Download ZIP". If prompted, save to your Downloads folder.
+1. Download this repository by clicking the green "↓ Code" button in the top right and then select "Download ZIP". If prompted, save to your Downloads folder.
 
 2. Extract the zip by going to your Downloads folder, right clicking, and selecting "Extract all..."
 
