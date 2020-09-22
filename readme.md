@@ -17,7 +17,13 @@ This is a basic shell utility to help upload the latest (beta) firmware to your 
 6. The script should now be running and asking for a number corresponding to your keypad model. Enter the number and you should be done!
 
 ## How to use (Mac)
-Under construction
+
+Untested (probably doesn't work.) If you are on this page and have a mac, please let me know and I'll find the solution.
 
 ## How to use (*Linux)
-Download the repository and run the shell script.
+
+1. Download and extract the repository.
+
+2. Make the shell script executable with chmod +x upload.sh
+
+3. Run the script.
