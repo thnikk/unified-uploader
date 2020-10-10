@@ -12,7 +12,7 @@ This is a basic shell utility to help upload the latest (beta) firmware to your 
 
 4. In the new window that pops up, click on the folder "unified-uploader-master". You can then click on the file called upload/upload.bat.
 
-5. Windows will tell your that SmartScreen prevented an anrecognized app from starting. Click "More info" and then "Run anyway".
+5. Windows will tell your that SmartScreen prevented an unrecognized app from starting. Click "More info" and then "Run anyway".
 
 6. The script should now be running and asking for a number corresponding to your keypad model. Enter the number and you should be done!
 
