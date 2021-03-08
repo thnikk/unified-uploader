@@ -102,6 +102,7 @@ class FlowBoxWindow(Gtk.Window):
         for model in models:
             button = Gtk.Button(label=model)
             button.connect("clicked", self.on_click, model)
+            button.set_size_request(width=-1, height=150)
             flowbox.add(button)
 
 
