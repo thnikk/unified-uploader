@@ -33,18 +33,18 @@ class FlowBoxWindow(Gtk.Window):
         self.set_default_size(300, 250)
 
         # Set title and subtitle in header bar
-        header = Gtk.HeaderBar(title="Unified Uploader")
-        header.set_subtitle("Click a button to select a model")
-        header.props.show_close_button = True
+        # header = Gtk.HeaderBar(title="Unified Uploader")
+        # header.set_subtitle("Click a button to select a model")
+        # header.props.show_close_button = True
 
-        self.set_titlebar(header)
+        # self.set_titlebar(header)
 
         scrolled = Gtk.ScrolledWindow()
         scrolled.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
 
         flowbox = Gtk.FlowBox()
         flowbox.set_valign(Gtk.Align.START)
-        flowbox.set_max_children_per_line(2)
+        flowbox.set_max_children_per_line(3)
         flowbox.set_selection_mode(Gtk.SelectionMode.NONE)
 
         # # Create label
@@ -102,7 +102,7 @@ class FlowBoxWindow(Gtk.Window):
         for model in models:
             button = Gtk.Button(label=model)
             button.connect("clicked", self.on_click, model)
-            button.set_size_request(width=-1, height=150)
+            button.set_size_request(width=-1, height=130)
             flowbox.add(button)
 
 
