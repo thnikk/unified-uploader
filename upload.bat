@@ -16,6 +16,13 @@ timeout 3 > nul
 wmic path Win32_SerialPort | find /I "Serial Device" | tools\win\awk "{print $13}" > tools\port
 set /p PORT=< tools\port
 
+IF "%SELECTION%"=="1" (
+set MODEL=2k
+) ELSE IF "%SELECTION%"=="2" (
+set MODEL=4k
+) ELSE IF "%SELECTION%"=="3" (
+set MODEL=MegaTouch
+
 echo Uploading code for %MODEL% keypad...
 tools\win\bossac.exe -i --port=%PORT% -U true -i -e -w -v firmware/%MODEL%.bin -R > nul
 echo Done! Press any key to close.
