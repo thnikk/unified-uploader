@@ -22,6 +22,7 @@ set MODEL=2k
 set MODEL=4k
 ) ELSE IF "%SELECTION%"=="3" (
 set MODEL=MegaTouch
+)
 
 echo Uploading code for %MODEL% keypad...
 tools\win\bossac.exe -i --port=%PORT% -U true -i -e -w -v firmware/%MODEL%.bin -R > nul
