@@ -1,7 +1,15 @@
 #!/usr/bin/env sh
 
+if [ "$(uname)" = "Darwin" ]; then
+	PRE_PORT="tty.usbmodem"
+	BIN_PATH="tools/mac"
+else
+	PRE_PORT="ttyACM"
+	BIN_PATH="tools/linux-x86"
+fi
+
 if [ -z "$2" ]; then
-    PORT=/dev/"$(ls /dev/ | grep ttyACM)"
+    PORT=/dev/"$(ls /dev/ | grep $PRE_PORT)"
 else
     PORT="$2"
 fi
@@ -31,10 +39,14 @@ else
 fi
 
 echo "Resetting the board..."
-stty -F "$PORT" 1200
+if [ "$(uname)" = "Darwin" ]; then
+	stty -f "$PORT" 1200
+else
+	stty -F "$PORT" 1200
+fi
 sleep 2
 echo "Uploading code for $MODEL"
 echo "File should be at firmware/$MODEL.bin"
-tools/bossac -d -p "$PORT" -e -w -v --reset --offset 0x2000 "firmware/$MODEL.bin"
+"${BIN_PATH}/bossac" -d -p "$PORT" -e -w -v --reset --offset 0x2000 "firmware/$MODEL.bin"
 echo "Done! Press enter to exit..."
 [ -z $1 ] && read -r

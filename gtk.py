@@ -21,7 +21,7 @@ class FlowBoxWindow(Gtk.Window):
             # this excludes your current terminal "/dev/tty"
             ports = glob.glob('/dev/ttyACM*')
         elif sys.platform.startswith('darwin'):
-            ports = glob.glob('/dev/tty.*')
+            ports = glob.glob('/dev/tty.usb*')
         else:
             raise EnvironmentError('Unsupported platform')
 

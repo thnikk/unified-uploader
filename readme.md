@@ -18,9 +18,15 @@ This is a basic shell utility to help upload the latest (beta) firmware to your 
 
 6. The script should now be running and asking for a number corresponding to your keypad model. Enter the number and you should be done!
 
-## How to use (Mac)
+## How to use (Mac, M1 not supported)
 
-Untested (probably doesn't work.) If you are on this page and have a mac, please let me know and I'll find the solution.
+1. Download this repository by clicking the green "↓ Code" button in the top right and then select "Download ZIP". If prompted, save to your Downloads folder.
+
+2. Open the download to extract it. This will open a finder window. Open the new extracted folder (it should be called unified-uploader-master and have a number at the end if you've downloaded it multiple times).
+
+3. Open a terminal and drag and drop upload.sh in the folder from the previous step into it.
+
+4. Enter the number for your model and you're done!
 
 ## How to use (*Linux)
 
