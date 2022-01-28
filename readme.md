@@ -22,11 +22,13 @@ This is a basic shell utility to help upload the latest (beta) firmware to your 
 
 1. Download this repository by clicking the green "↓ Code" button in the top right and then select "Download ZIP". If prompted, save to your Downloads folder.
 
-2. Open the download to extract it. This will open a finder window. Open the new extracted folder (it should be called unified-uploader-master and have a number at the end if you've downloaded it multiple times).
+2. Open the download to extract it. This will open a finder window with the newly extracted folder highlighted. If you're using Safari, you can open it by clicking on your downloads and hold control while click on the download to select "Show in Finder".
 
-3. Open a terminal and drag and drop upload.sh in the folder from the previous step into it.
+3. Open a terminal and enter `cd `(including the space at the end), then drag and drop the folder from the previous step into the terminal. The command should look something like `cd unified-uploader-master` (with a number at the end if you've downloaded it multiple times). Press return to execute the command.
 
-4. Enter the number for your model and you're done!
+4. Run the updater script by entering `./upload.sh`
+
+5. Enter the number for your model and you're done!
 
 ## How to use (*Linux)
 
